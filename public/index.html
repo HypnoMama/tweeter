@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="/styles/nav.css">
     <link rel="stylesheet" type="text/css" href="/styles/new-tweet.css">
+    <link rel="stylesheet" type="text/css" href="/styles/Previous-tweets.css">
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -39,10 +40,14 @@
           <span class="counter">140</span>
         </form>
       </section>
-      <h2>Here is a heading.</h2>
-      <p>I wonder where this will wind up?</p>
-      <p>I need a whole schwack of stuff here to test out.  Remember how easy it was in atom to just populate the lorem ipsum?  I wonder if there is that in Sublime?  Probably but at this point it is literally more interesting to type something out.</p>
-      <p>I just don't feel like looking up lorem ipsum again!  And why can't I just googe lorem ipsum and have it come up with lorem ipsum that I can copy and paste?  Why does it give me an explanation of lorem ipsum?  Ugh.  I suppose I can just copy and paste that - and I have - but it is just not as satisfying somehow. </p>
+      <section id="container">
+        <article class="prev-tweet">
+          <header><span id="icon">icon</span>Name<span id="handle">Handle</span></header>
+          <p>Tweet text goes here</p>
+          <footer><span>Number of </span>Days Ago</footer>
+        </article>
+      </section>
+
 
 
     </main>
