@@ -2,12 +2,21 @@ article.prev-tweet {
   border: 1px solid #e1e1e1;
   margin: 30px;
   border-radius: 10px;
+  opacity: 0.5;
 }
+
+article.prev-tweet:hover {
+  opacity: 1;
+  border: 1px solid #244751;
+}
+
 
 article.prev-tweet header {
   background-color: #eee;
   font-weight: bold;
   padding: 5px;
+  color: #244751
+  border-radius: 10px;
 }
 
 article.prev-tweet p {
@@ -22,7 +31,7 @@ article.prev-tweet span {
 
 #handle {
   float: right;
-  color: grey;
+  color: #8c8c8c;
   font-weight: normal;
 }
 
@@ -35,3 +44,4 @@ article.prev-tweet footer {
   padding: 8px;
   font-size: 13px;
 }
+
