@@ -1,0 +1,37 @@
+article.prev-tweet {
+  border: 1px solid #e1e1e1;
+  margin: 30px;
+  border-radius: 10px;
+}
+
+article.prev-tweet header {
+  background-color: #eee;
+  font-weight: bold;
+  padding: 5px;
+}
+
+article.prev-tweet p {
+  padding: 20px;
+  padding-left: 10px;
+}
+
+
+article.prev-tweet span {
+
+}
+
+#handle {
+  float: right;
+  color: grey;
+  font-weight: normal;
+}
+
+#icon {
+  padding: 5px;
+}
+
+article.prev-tweet footer {
+  border-top: 1px solid #e1e1e1;
+  padding: 8px;
+  font-size: 13px;
+}
