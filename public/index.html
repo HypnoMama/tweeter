@@ -5,10 +5,13 @@
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/styles/nav.css">
+    <link rel="stylesheet" type="text/css" href="/styles/new-tweet.css">
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
@@ -21,13 +24,26 @@
 
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
-      <img class="logo" src="/images/bird.png" width="80px" height="80px">
+      <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
     </nav>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <form action="/tweets/" method="POST">
+          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <input type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </form>
+      </section>
+      <h2>Here is a heading.</h2>
+      <p>I wonder where this will wind up?</p>
+      <p>I need a whole schwack of stuff here to test out.  Remember how easy it was in atom to just populate the lorem ipsum?  I wonder if there is that in Sublime?  Probably but at this point it is literally more interesting to type something out.</p>
+      <p>I just don't feel like looking up lorem ipsum again!  And why can't I just googe lorem ipsum and have it come up with lorem ipsum that I can copy and paste?  Why does it give me an explanation of lorem ipsum?  Ugh.  I suppose I can just copy and paste that - and I have - but it is just not as satisfying somehow. </p>
     </main>
+
 
   </body>
 </html>
