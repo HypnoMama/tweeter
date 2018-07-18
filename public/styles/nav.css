@@ -40,6 +40,11 @@
   background-color: white;
 }
 
+#nav-bar button:focus {
+  outline: 1px solid #00c2a1;
+
+}
+
 
 
 #nav-bar .edit {
