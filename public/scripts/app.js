@@ -41,40 +41,43 @@ $(document).ready(function(){
     let $heart = $('<i>').addClass('fas fa-heart')
     let daysAgo = moment(dateCreated).fromNow();
 
-    let $article = $('<article>')//creates the article element
-    $article.addClass('prev-tweet')
+    let $article = $('<article>').addClass('prev-tweet');//creates the article element
     let $header = $('<header>')
 
     //need to add info into header before appending
-    $header.text(name)
-    $header.append($image)
-    $span.text(handle);
-    $header.append($span);
-    $footer.text(daysAgo);
-    $footer.append($spanFooterIcons)
-    $spanFooterIcons.append($flag).append($retweet).append($heart)
+    $header.text(name)//adds the name text to the header
+    $header.append($image)//appends the image tag to the header
+    $span.text(handle);//adds the persons handle to the header span
+    $header.append($span);//appends handle span to header
+    $footer.text(daysAgo);//adds text to the footer
+    $spanFooterIcons.append($flag).append($retweet).append($heart);
+    $footer.append($spanFooterIcons)//
     $text.text(content);
+    //can refactor to one line
+    //let header = $.text().append()
+    //look into appendTo()
 
 
     $article.append($header);
     $article.append($text);
     $article.append($footer);
 
-
-
-
-
-
-    return $article.html();
-
+    return $article
+    //no need to return the html as we've appended everything to the
+    // article itself
 
 
   }
 
-  createTweetElement(tweets);
+  const $tweet = createTweetElement(tweets);
+  const $tweetsContainer = $('#tweets-container')
+  $tweetsContainer.append($tweet);
+
+
 
 
   //end
-})
+});
+
 
 
