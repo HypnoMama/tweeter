@@ -64,14 +64,18 @@ $(document).ready(function(){
     const body = $(this).serialize();
     const $counter = $('.counter').text();
     const countNum = Number($counter);
-    const $input = $('textarea').val();
+    let $input = $('textarea').val(); //figure this out as this is a copy not the actual thing
+
+
+
     if ($input !== '' && countNum >= 0) {
-       $.ajax("/tweets", {
+      $.ajax("/tweets", {
       method: "POST",
       url: "/tweets",
       data: body
     })
       .done(function() {
+        $('textarea').val('')
         loadTweets();
       })
     } else {
@@ -80,6 +84,8 @@ $(document).ready(function(){
 
 
   })
+
+
 
   function loadTweets() {
     //gets tweets from /tweets
