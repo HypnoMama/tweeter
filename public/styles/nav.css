@@ -28,7 +28,7 @@
 
 #nav-bar button {
   color: #00a087;
-  background-color: white;
+  background-color: #bffff5;
   float: right;
   height: 50px;
   margin: 15px;
@@ -36,9 +36,11 @@
   border-radius: 10px;
 }
 
-.buttonToggle {
-  color: #bffff5;
+#nav-bar button:hover {
+  background-color: white;
 }
+
+
 
 #nav-bar .edit {
   color: #00a087;
