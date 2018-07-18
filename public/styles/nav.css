@@ -26,6 +26,22 @@
   line-height: 2.5;
 }
 
+#nav-bar button {
+  color: #00a087;
+  background-color: white;
+  float: right;
+  height: 50px;
+  margin: 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
 
+.buttonToggle {
+  color: #bffff5;
+}
+
+#nav-bar .edit {
+  color: #00a087;
+}
 
 
