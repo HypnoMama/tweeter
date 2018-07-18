@@ -62,11 +62,10 @@ $(document).ready(function(){
   $('form').on('submit', function(event){
     event.preventDefault();
     const body = $(this).serialize();
-    const $counter = $('.counter').text()
-
-
-
-    if (body !== '' && $counter < 0) {
+    const $counter = $('.counter').text();
+    const countNum = Number($counter);
+    const $input = $('textarea').val();
+    if ($input !== '' && countNum >= 0) {
        $.ajax("/tweets", {
       method: "POST",
       url: "/tweets",
