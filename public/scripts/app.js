@@ -30,17 +30,16 @@ $(document).ready(function(){
     let createdAt = data.created_at
     let dateCreated = new Date(createdAt)
     let currentDate = new Date();
+
     let $span = $('<span>').attr('id', 'handle')
+    let $image = $('<img>').attr('src', avatar)
     let $text = $('<p>')
     let $footer = $('<footer>')
-    let $spanFooterIcons = $('<span>').attr('id', 'icons')
-    // let $icons = $('<i class="fas fa-flag"></i><i class="fas fa-retweet"></i><i class="fas fa-heart"></i>')
-    // $spanFooterIcons.append('<i>').addClass;
-    // $spanFooterIcons.append('<i>').addClass('fas fa-retweet');
-    // $spanFooterIcons.append('<i>').;
+    let $spanFooterIcons = $('<span>').attr('id', 'icons');
     let $flag = $('<i>').addClass('fas fa-flag')
     let $retweet = $('<i>').addClass('fas fa-retweet')
     let $heart = $('<i>').addClass('fas fa-heart')
+    let daysAgo = moment(dateCreated).fromNow();
 
     let $article = $('<article>')//creates the article element
     $article.addClass('prev-tweet')
@@ -48,29 +47,28 @@ $(document).ready(function(){
 
     //need to add info into header before appending
     $header.text(name)
+    $header.append($image)
+    $span.text(handle);
     $header.append($span);
-
+    $footer.text(daysAgo);
     $footer.append($spanFooterIcons)
     $spanFooterIcons.append($flag).append($retweet).append($heart)
+    $text.text(content);
 
-    $article.append($header)
+
+    $article.append($header);
     $article.append($text);
     $article.append($footer);
 
 
-    console.log($article.html())
-    $($header).text(name)//add text or something
-    $($span).text(handle)//start back here!!!
 
 
-    $('article #handle').append(handle)
-    $('article p').append(content)
-    $('article header').append('<img src="' + avatar+ '">')
-    let daysAgo = moment(dateCreated).fromNow()
-    console.log(daysAgo);
-    $('footer').append(daysAgo)
 
-    //(#container).append(article)
+
+    return $article.html();
+
+
+
   }
 
   createTweetElement(tweets);
