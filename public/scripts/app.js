@@ -107,6 +107,18 @@ $(document).ready(function(){
   renderTweets(tweets);
 
 
+    //when the tweet button is pressed
+    //create the object
+    //add object to array
+    //use ajax and jquery
+  $('form').on('submit', function(event){ //need to use 'form' as the thing that is submitting, not the input
+    //prevents browser from navigating away
+    event.preventDefault();
+    const body = $(this).serialize();
+  })
+
+
+
 
   //when we post it call loadData()
   //end
