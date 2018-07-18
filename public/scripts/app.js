@@ -4,3 +4,79 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+$(document).ready(function(){
+
+  const tweets = {
+    "user": {
+      "name": "Newton",
+      "avatars": {
+        "small":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png",
+        "regular": "https://vanillicon.com/788e533873e80d2002fa14e1412b4188.png",
+        "large":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_200.png"
+      },
+      "handle": "@SirIsaac"
+    },
+    "content": {
+      "text": "If I have seen further it is by standing on the shoulders of giants"
+    },
+    "created_at": 1461116232227
+  }
+
+  function createTweetElement(data){
+    let name = data.user.name;
+    let handle = data.user.handle
+    let avatar = data.user.avatars.small
+    let content = data.content.text
+    let createdAt = data.created_at
+    let dateCreated = new Date(createdAt)
+    let currentDate = new Date();
+    let $span = $('<span>').attr('id', 'handle')
+    let $text = $('<p>')
+    let $footer = $('<footer>')
+    let $spanFooterIcons = $('<span>').attr('id', 'icons')
+    // let $icons = $('<i class="fas fa-flag"></i><i class="fas fa-retweet"></i><i class="fas fa-heart"></i>')
+    // $spanFooterIcons.append('<i>').addClass;
+    // $spanFooterIcons.append('<i>').addClass('fas fa-retweet');
+    // $spanFooterIcons.append('<i>').;
+    let $flag = $('<i>').addClass('fas fa-flag')
+    let $retweet = $('<i>').addClass('fas fa-retweet')
+    let $heart = $('<i>').addClass('fas fa-heart')
+
+    let $article = $('<article>')//creates the article element
+    $article.addClass('prev-tweet')
+    let $header = $('<header>')
+
+    //need to add info into header before appending
+    $header.text(name)
+    $header.append($span);
+
+    $footer.append($spanFooterIcons)
+    $spanFooterIcons.append($flag).append($retweet).append($heart)
+
+    $article.append($header)
+    $article.append($text);
+    $article.append($footer);
+
+
+    console.log($article.html())
+    $($header).text(name)//add text or something
+    $($span).text(handle)//start back here!!!
+
+
+    $('article #handle').append(handle)
+    $('article p').append(content)
+    $('article header').append('<img src="' + avatar+ '">')
+    let daysAgo = moment(dateCreated).fromNow()
+    console.log(daysAgo);
+    $('footer').append(daysAgo)
+
+    //(#container).append(article)
+  }
+
+  createTweetElement(tweets);
+
+
+  //end
+})
+
+
