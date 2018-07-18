@@ -104,7 +104,7 @@ $(document).ready(function(){
     });
   }
 
-  renderTweets(tweets);
+  // renderTweets(tweets);
 
 
     //when the tweet button is pressed
@@ -115,9 +115,35 @@ $(document).ready(function(){
     //prevents browser from navigating away
     event.preventDefault();
     const body = $(this).serialize();
+    console.log(this)
+    console.log(body)
+      $.ajax("/tweets", {
+      method: "POST",
+      url: "/tweets",
+      data: body
+    })
+      .done(function() {
+        console.log("Yay something happened!!")
+      })
+
   })
 
+  function loadTweets() {
+    //gets tweets from /tweets
+    //receives array of tweets as JSON
+    $.ajax("/tweets", {
+      method: "GET",
+      url: "/tweets",
+      data: $(this).serialize()
+    })
 
+    .done(function(tweets){
+      //take body add to tweets at front (prepend???)
+      renderTweets(tweets);
+    })
+  }
+
+  loadTweets()
 
 
   //when we post it call loadData()
