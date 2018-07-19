@@ -74,8 +74,9 @@ $(document).ready(function(){
     })
       .done(function() {
         $('textarea').val('');
-        // $('.new-tweet #error').text('');
+        $('.counter').text('140');
         loadTweets();
+
       })
     } else if ($input === '') {
       // alert('The form cannot be empty or greater than 140 characters');
