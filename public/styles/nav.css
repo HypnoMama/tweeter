@@ -45,7 +45,9 @@
 
 }
 
-
+.fas {
+  padding: 3px;
+}
 
 #nav-bar .edit {
   color: #00a087;
