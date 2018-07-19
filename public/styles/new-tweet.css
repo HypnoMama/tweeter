@@ -36,3 +36,7 @@ textarea:focus {
 .counterRed {
   color: tomato;
 }
+
+.new-tweet #error h5 {
+  display: hidden;
+}
