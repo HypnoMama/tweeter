@@ -6,8 +6,6 @@
   border-radius: 10px;
   padding: 10px;
 
-
-
 }
 
 .new-tweet h2 {
@@ -39,4 +37,8 @@ textarea:focus {
 
 .new-tweet #error h5 {
   display: hidden;
+}
+
+input:focus {
+  outline: 1px solid #5aa0b5;
 }
