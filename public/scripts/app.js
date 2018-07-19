@@ -16,7 +16,6 @@ $(document).ready(function(){
     let content = data.content.text;
     let createdAt = data.created_at;
     let dateCreated = new Date(createdAt);
-    let currentDate = new Date();
 
     let $span = $('<span>').attr('id', 'handle');
     let $image = $('<img>').attr('src', avatar);
@@ -30,7 +29,6 @@ $(document).ready(function(){
 
     let $article = $('<article>').addClass('prev-tweet');
     let $header = $('<header>');
-
 
     $header.text(name);
     $header.append($image);
@@ -64,9 +62,9 @@ $(document).ready(function(){
     const body = $(this).serialize();
     const $counter = $('.counter').text();
     const countNum = Number($counter);
-    let $input = $('textarea').val(); //figure this out as this is a copy not the actual thing
-
-
+    let $input = $('textarea').val();
+    const $error = $('#error')
+    $error.hide();
 
     if ($input !== '' && countNum >= 0) {
       $.ajax("/tweets", {
@@ -75,11 +73,17 @@ $(document).ready(function(){
       data: body
     })
       .done(function() {
-        $('textarea').val('')
+        $('textarea').val('');
+        // $('.new-tweet #error').text('');
         loadTweets();
       })
-    } else {
-      alert('The form cannot be empty or greater than 140 characters');
+    } else if ($input === '') {
+      // alert('The form cannot be empty or greater than 140 characters');
+      $error.text('You didn\'t enter anything to Tweet. Please add some text before Tweeting!');
+      $error.slideDown()
+    } else if (countNum <= 0) {
+      $error.text('Sorry, your tweet is too long! Please keep it to 140 characters or less.');
+      $error.slideDown();
     }
 
 
