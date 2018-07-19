@@ -4,7 +4,7 @@ article.prev-tweet {
   border: 1px solid #e1e1e1;
   margin: 30px;
   border-radius: 10px;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 article.prev-tweet:hover {
