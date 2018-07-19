@@ -35,7 +35,7 @@ article.prev-tweet p {
 
 
 
- #icons {
+#icons {
   float: right;
   color: cyan;
   opacity: 0;
@@ -71,8 +71,5 @@ article.prev-tweet footer {
   opacity: 1;
 }
 
- .fa-square {
-  padding-right: 10px;
-  size: 3x;
-}
+
 
