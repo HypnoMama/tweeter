@@ -36,12 +36,8 @@ $(document).ready(function(){
     $header.append($span);
     $footer.text(daysAgo);
     $spanFooterIcons.append($flag).append($retweet).append($heart);
-    $footer.append($spanFooterIcons)//
+    $footer.append($spanFooterIcons)
     $text.text(content);
-    //can refactor to one line
-    //let header = $.text().append()
-    //look into appendTo()
-
 
     $article.append($header);
     $article.append($text);
@@ -63,7 +59,7 @@ $(document).ready(function(){
     const $counter = $('.counter').text();
     const countNum = Number($counter);
     let $input = $('textarea').val();
-    const $error = $('#error')
+    const $error = $('#error');
     $error.hide();
 
     if ($input !== '' && countNum >= 0) {
@@ -76,41 +72,31 @@ $(document).ready(function(){
         $('textarea').val('');
         $('.counter').text('140');
         loadTweets();
-
-      })
+      });
     } else if ($input === '') {
-      // alert('The form cannot be empty or greater than 140 characters');
       $error.text('You didn\'t enter anything to Tweet. Please add some text before Tweeting!');
       $error.slideDown()
     } else if (countNum <= 0) {
       $error.text('Sorry, your tweet is too long! Please keep it to 140 characters or less.');
       $error.slideDown();
     }
-
-
-  })
+  });
 
 
 
   function loadTweets() {
-    //gets tweets from /tweets
-    //receives array of tweets as JSON
     $.ajax("/tweets", {
       method: "GET",
       url: "/tweets",
       data: $(this).serialize()
     })
-
     .done(function(tweets){
-      //take body add to tweets at front (prepend???)
       renderTweets(tweets);
-    })
+    });
   }
 
-  loadTweets()
+  loadTweets();
 
-
-  //end
 });
 
 
