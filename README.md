@@ -15,3 +15,13 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Body-Parser
+- Chance
+- md5
+- MongoDB
+
+Screenshots:
+
+!["Screenshot of the tweet box and previous tweets"](https://github.com/HypnoMama/tweeter/blob/master/docs/Display.png?raw=true)
+!["Screenshot of the highlighted previous tweets upon hovering"](https://github.com/HypnoMama/tweeter/blob/master/docs/Previous-Tweet-Highlighted.png?raw=true)
+!["Screenshot showing hidden tweet box"](https://github.com/HypnoMama/tweeter/blob/master/docs/Compose-Tweet-Hidden.png?raw=true)
