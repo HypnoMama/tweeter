@@ -24,7 +24,7 @@ $(document).ready(function(){
     let $spanFooterIcons = $('<span>').attr('id', 'icons');
     let $flag = $('<i>').addClass('fas fa-flag');
     let $retweet = $('<i>').addClass('fas fa-retweet');
-    let $heart = $('<i>').addClass('fas fa-heart');
+    let $heart = $('<i>').addClass('fas fa-heart').attr('data-like', "0");
     let daysAgo = moment(dateCreated).fromNow();
 
     let $article = $('<article>').addClass('prev-tweet');
