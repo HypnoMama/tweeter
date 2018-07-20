@@ -1,7 +1,5 @@
-@import '_partials.scss';
-
 #nav-bar {
-  background-color: $nav-barColor;
+  background-color: #00a087;
   color: #e8fdff;
   height: 80px;
   padding: 0 2em;
@@ -10,51 +8,40 @@
   width: 100%;
   margin-bottom: 0;
   z-index: 1;
-
-  .logo {
+}
+#nav-bar .logo {
   width: 80px;
   height: 80px;
   float: left;
-  }
-
-  .header {
+}
+#nav-bar .header {
   font-size: 2em;
   padding-left: 10px;
   height: 80px;
   float: left;
   line-height: 2.5;
-  }
-
-  button {
-  color: $nav-barColor;
+}
+#nav-bar button {
+  color: #00a087;
   background-color: #d9fff9;
   float: right;
   height: 50px;
   margin: 15px;
   border: 1px solid black;
   border-radius: 10px;
-  }
-
-  button:hover {
+}
+#nav-bar button:hover {
   background-color: white;
-  }
-
-  button:focus {
+}
+#nav-bar button:focus {
   outline: 1px solid #00c2a1;
-  }
-
-  .edit {
-  color: $nav-barColor;
-  }
-
+}
+#nav-bar .edit {
+  color: #00a087;
 }
 
 .fas {
   padding: 3px;
-  }
+}
 
-
-
-
-
-
+/*# sourceMappingURL=nav2.css.map */
