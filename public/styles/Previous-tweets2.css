@@ -19,11 +19,6 @@ article.prev-tweet p {
   opacity: 1;
   word-wrap: break-word;
 }
-article.prev-tweet #icons {
-  float: right;
-  color: cyan;
-  opacity: 0;
-}
 article.prev-tweet #handle {
   float: right;
   color: #8c8c8c;
@@ -44,6 +39,18 @@ article.prev-tweet footer {
   padding: 8px;
   font-size: 13px;
   opacity: 1;
+  line-height: 1.2em;
+}
+article.prev-tweet footer #icons {
+  float: right;
+  color: cyan;
+  opacity: 0;
+}
+article.prev-tweet footer #icons #likes {
+  font-weight: bold;
+  font-size: 1.3em;
+  padding-left: 2px;
+  color: #00b3b3;
 }
 
 article.prev-tweet:hover {
