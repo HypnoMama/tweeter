@@ -1,0 +1,68 @@
+@import '_partials.scss';
+
+article.prev-tweet {
+  border: $border;
+  margin: 30px;
+  border-radius: 10px;
+  opacity: 0.8;
+
+
+  header {
+  background-color: #eee;
+  font-weight: bold;
+  padding: 5px;
+  padding-bottom: 20px;
+  color: #244751;
+  font-size: 20px;
+  border-radius: 10px 10px 0px 0px;
+  }
+
+  p {
+  padding: 20px;
+  padding-left: 10px;
+  opacity: 1;
+  word-wrap: break-word;
+  }
+
+  #icons {
+  float: right;
+  color: cyan;
+  opacity: 0;
+  }
+
+  #handle {
+  float: right;
+  color: #8c8c8c;
+  font-weight: normal;
+  font-size: 15px;
+  padding: 5px;
+  }
+
+  img {
+  padding: 2px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 10%;
+  margin-right: 10px;
+  float: left;
+  }
+
+  footer {
+  border-top: $border;
+  padding: 8px;
+  font-size: 13px;
+  opacity: 1;
+  }
+
+
+}
+
+
+article.prev-tweet:hover {
+  opacity: 1;
+  border: 1px solid #244751;
+  }
+
+article.prev-tweet:hover #icons {
+  opacity: 1;
+  }

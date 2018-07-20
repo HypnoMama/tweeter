@@ -1,0 +1,48 @@
+@import '_partials.scss';
+
+.new-tweet {
+  margin: 2em;
+  padding-top: 60px;
+  background-color: #eee;
+  border: $border;
+  border-radius: 10px;
+  padding: 10px;
+
+  h2 {
+  margin-top: 0px;
+  border-bottom: 1px solid black;
+  }
+
+  textarea {
+  padding: 5px 5px;
+  margin-bottom: 5px;
+  width: 100%;
+  }
+
+  .counter {
+  float: right;
+  font-style: italic;
+  padding-right: 7px;
+  color: black;
+  }
+
+  .counterRed {
+  color: tomato;
+  }
+
+  #error h5 {
+  display: hidden;
+  }
+
+
+}
+
+
+textarea:focus {
+  outline: 1px solid $outlineColor;
+}
+
+
+input:focus {
+  outline: 1px solid $outlineColor;
+}

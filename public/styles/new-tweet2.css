@@ -1,0 +1,39 @@
+.new-tweet {
+  margin: 2em;
+  padding-top: 60px;
+  background-color: #eee;
+  border: 1px solid #e1e1e1;
+  border-radius: 10px;
+  padding: 10px;
+}
+.new-tweet h2 {
+  margin-top: 0px;
+  border-bottom: 1px solid black;
+}
+.new-tweet textarea {
+  padding: 5px 5px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+.new-tweet .counter {
+  float: right;
+  font-style: italic;
+  padding-right: 7px;
+  color: black;
+}
+.new-tweet .counterRed {
+  color: tomato;
+}
+.new-tweet #error h5 {
+  display: hidden;
+}
+
+textarea:focus {
+  outline: 1px solid #5aa0b5;
+}
+
+input:focus {
+  outline: 1px solid #5aa0b5;
+}
+
+/*# sourceMappingURL=new-tweet2.css.map */

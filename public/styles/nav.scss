@@ -1,0 +1,60 @@
+@import '_partials.scss';
+
+#nav-bar {
+  background-color: $nav-barColor;
+  color: #e8fdff;
+  height: 80px;
+  padding: 0 2em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin-bottom: 0;
+  z-index: 1;
+
+  .logo {
+  width: 80px;
+  height: 80px;
+  float: left;
+  }
+
+  .header {
+  font-size: 2em;
+  padding-left: 10px;
+  height: 80px;
+  float: left;
+  line-height: 2.5;
+  }
+
+  button {
+  color: $nav-barColor;
+  background-color: #d9fff9;
+  float: right;
+  height: 50px;
+  margin: 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+  }
+
+  button:hover {
+  background-color: white;
+  }
+
+  button:focus {
+  outline: 1px solid #00c2a1;
+  }
+
+  .edit {
+  color: $nav-barColor;
+  }
+
+  .fas {
+  padding: 3px;
+  }
+
+}
+
+
+
+
+
+
