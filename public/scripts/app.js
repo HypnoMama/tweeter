@@ -24,8 +24,12 @@ $(document).ready(function(){
     let $spanFooterIcons = $('<span>').attr('id', 'icons');
     let $flag = $('<i>').addClass('fas fa-flag');
     let $retweet = $('<i>').addClass('fas fa-retweet');
-    let $heart = $('<i>').addClass('fas fa-heart').attr('data-like', "0");
+    let $heart = $('<i>').addClass('fas fa-heart').attr('data-like', "0").attr('id', 'heart').click(function(){
+      console.log("clicked the heart!")
+    });
+    let $likes = $('<span>').attr('id', 'likes').text('0');
     let daysAgo = moment(dateCreated).fromNow();
+    let $div = ('$div');//
 
     let $article = $('<article>').addClass('prev-tweet');
     let $header = $('<header>');
@@ -35,8 +39,8 @@ $(document).ready(function(){
     $span.text(handle);
     $header.append($span);
     $footer.text(daysAgo);
-    $spanFooterIcons.append($flag).append($retweet).append($heart);
-    $footer.append($spanFooterIcons)
+    $spanFooterIcons.append($flag).append($retweet).append($heart).append($likes);
+    $footer.append($spanFooterIcons);
     $text.text(content);
 
     $article.append($header);
